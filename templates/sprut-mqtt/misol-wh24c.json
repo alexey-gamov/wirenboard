@@ -1,0 +1,137 @@
+{
+  "name": "Погодная станция",
+  "manufacturer": "Misol",
+  "model": "WH24C",
+  "catalogId": 1894,
+  "services": [
+    {
+      "name": "Температура",
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Float",
+            "topicSearch": "/devices/(misol)/controls/temperature/meta/type",
+            "topicGet": "/devices/(1)/controls/temperature",
+            "minStep": 0.5,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Влажность",
+      "type": "HumiditySensor",
+      "characteristics": [
+        {
+          "type": "CurrentRelativeHumidity",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/humidity",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Освещенность",
+      "type": "LightSensor",
+      "characteristics": [
+        {
+          "type": "CurrentAmbientLightLevel",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/light",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Направление ветра",
+      "type": "GenericService",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "topicGet": "/devices/(1)/controls/wind_direction",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Скорость ветра",
+      "type": "GenericService",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "topicGet": "/devices/(1)/controls/wind_speed",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Порывы ветра",
+      "type": "GenericService",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "topicGet": "/devices/(1)/controls/wind_gust",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Осадки",
+      "type": "GenericService",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "topicGet": "/devices/(1)/controls/rain",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ультрафиолет",
+      "type": "C_UltravioletSensor",
+      "characteristics": [
+        {
+          "type": "C_CurrentUltraviolet",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/uvi",
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Давление",
+      "type": "C_AtmosphericPressureSensor",
+      "characteristics": [
+        {
+          "type": "C_CurrentAtmosphericPressure",
+          "link": {
+            "type": "Float",
+            "topicGet": "/devices/(1)/controls/bar",
+            "minStep": 0.5,
+            "checkValue": true
+          }
+        }
+      ]
+    }
+  ]
+}
