@@ -1,0 +1,68 @@
+{
+  "name": "Теплый пол",
+  "manufacturer": "Terneo",
+  "model": "AX",
+  "catalogId": 1669,
+  "link": "https://terneo-api.readthedocs.io/ru/latest/ru/mqtt_ru.html",
+  "services": [
+    {
+      "type": "Thermostat",
+      "characteristics": [
+        {
+          "type": "TargetTemperature",
+          "link": {
+            "type": "Float",
+            "topicSearch": "(.*/terneo_ax_.*)/setTemp",
+            "topicGet": "(1)/setTemp",
+            "topicSet": "(1)/setTemp"
+          },
+          "minValue": 5,
+          "maxValue": 45,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Float",
+            "topicGet": "(1)/floorTemp"
+          }
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "link": {
+            "type": "Integer",
+            "topicGet": "(1)/powerOff",
+            "topicSet": "(1)/powerOff",
+            "map": {
+              "0": 1,
+              "1": 0
+            }
+          },
+          "validValues": "0,1"
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": {
+            "type": "Integer",
+            "topicGet": "(1)/load"
+          },
+          "validValues": "0,1"
+        }
+      ]
+    },
+    {
+      "name": "Температура воздуха",
+      "type": "TemperatureSensor",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Float",
+            "topicGet": "(1)/airTemp"
+          }
+        }
+      ]
+    }
+  ]
+}
