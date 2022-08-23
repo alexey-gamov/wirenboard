@@ -1,6 +1,6 @@
 [
   {
-    "name": "LED DIMMER (RGB)",
+    "name": "WB MRGBW DIMMER (RGB)",
     "manufacturer": "WirenBoard",
     "model": "WB-MRGBW-D-fw3",
     "catalogId": 69,
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "name": "LED DIMMER (W)",
+    "name": "WB MRGBW DIMMER (W)",
     "manufacturer": "WirenBoard",
     "model": "WB-MRGBW-D-fw3",
     "catalogId": 69,
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "name": "LED DIMMER (CCT)",
+    "name": "WB MRGBW DIMMER (CCT)",
     "manufacturer": "WirenBoard",
     "model": "WB-MRGBW-D-fw3",
     "catalogId": 69,

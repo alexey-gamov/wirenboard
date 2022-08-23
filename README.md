@@ -1,4 +1,4 @@
-# wirenboard [![--](https://img.shields.io/badge/telegram-wb-success)](https://t.me/wirenboard) [![--](https://img.shields.io/badge/telegram-sh-orange)](https://t.me/SprutAI_SprutHub)
+# wirenboard [![wb](https://img.shields.io/badge/telegram-wb-success)](https://t.me/wirenboard) [![sh](https://img.shields.io/badge/telegram-sh-orange)](https://t.me/SprutAI_SprutHub)
 
 Маленькая коллекция самописных правил и шаблонов для контроллеров [WirenBoard](https://wirenboard.com).
 
@@ -11,6 +11,8 @@
 1. Скопировать интересующий файл с шаблоном из текущего репозитория
 1. Перейти в **скрытую** пользовательскую папку `/mnt/data/makesimple/.SprutHub/data/Templates`
 1. В зависимости от типа подключения устройства разместить шаблон в `MQTT/Custom` или `ZigBee/Custom`
+1. В веб морде нажать `Перезагрузить шаблоны` в разделе **Настройки - Общие - Расширенные**
+1. Перезагрузить хаб для **поиска новых устройств**
 
 #### Modbus устройства для wirenboard
 

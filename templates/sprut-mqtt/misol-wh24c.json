@@ -3,6 +3,7 @@
   "manufacturer": "Misol",
   "model": "WH24C",
   "catalogId": 1894,
+  "link": "https://sprut.ai/article/meteostanciya-misol-s-rs485",
   "services": [
     {
       "name": "Температура",
