@@ -1,0 +1,46 @@
+[
+  {
+    "manufacturer": "WirenBoard",
+    "model": "WB-MAI",
+    "catalogId": 69,
+    "services": [
+      {
+        "name": "Температура",
+        "type": "TemperatureSensor",
+        "characteristics": [
+          {
+            "type": "CurrentTemperature",
+            "link": {
+              "type": "Float",
+              "topicSearch": "/devices/(wb-mai(?:6|11)_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Temperature)/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "minStep": 0.1,
+              "checkValue": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "WirenBoard",
+    "model": "WB-MAI",
+    "catalogId": 69,
+    "services": [
+      {
+        "name": "Сухой контакт",
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mai(?:6|11)_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* State)/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
