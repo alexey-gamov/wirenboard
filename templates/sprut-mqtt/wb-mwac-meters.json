@@ -1,0 +1,20 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WB-MWAC",
+  "services": [
+    {
+      "type": "C_WaterMeter",
+      "characteristics": [
+        {
+          "type": "C_CubicMeter",
+          "link": {
+            "type": "Float",
+            "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/(P[1-2] Counter)/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "scale": 0.01
+          }
+        }
+      ]
+    }
+  ]
+}
