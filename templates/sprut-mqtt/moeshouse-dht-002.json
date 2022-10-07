@@ -1,0 +1,103 @@
+{
+  "manufacturer": "MoesHouse",
+  "model": "BHT-002-GBLW",
+  "catalogId": 1782,
+  "services": [
+    {
+      "type": "Thermostat",
+      "characteristics": [
+        {
+          "type": "TargetTemperature",
+          "link": {
+            "type": "Float",
+            "topicSearch": "/devices/(bht-6000-series_[0-9]{1,3})/controls/Power/meta/type",
+            "topicGet": "/devices/(1)/controls/Setting temperature",
+            "topicSet": "/devices/(1)/controls/Setting temperature/on"
+          },
+          "minValue": 5,
+          "maxValue": 35,
+          "minStep": 0.5
+        },
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Float",
+            "topicGet": "/devices/(1)/controls/Temperature from internal sensor"
+          }
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/Power",
+            "topicSet": "/devices/(1)/controls/Power/on"
+          },
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/Heating status"
+          },
+          "validValues": "OFF,HEAT"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Manual mode",
+        "topicSet": "/devices/(1)/controls/Manual mode/on"
+      },
+      "name": "Ручное управление",
+      "init": true,
+      "value": 0,
+      "values": [
+        {
+          "value": 1,
+          "name": "Включено"
+        },
+        {
+          "value": 0,
+          "name": "Выключено"
+        }
+      ]
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Lock buttons",
+        "topicSet": "/devices/(1)/controls/Lock buttons/on"
+      },
+      "name": "Блокировка кнопок",
+      "init": true,
+      "value": 0,
+      "values": [
+        {
+          "value": 1,
+          "name": "Включена"
+        },
+        {
+          "value": 0,
+          "name": "Выключена"
+        }
+      ]
+    },
+	{
+      "link": {
+        "type": "Float",
+        "topicGet": "/devices/(1)/controls/Weekly program setting temperature",
+        "topicSet": "/devices/(1)/controls/Weekly program setting temperature/on"
+      },
+      "name": "Температура по расписанию (°C)",
+      "init": true,
+      "value": 5,
+      "minValue": 5,
+      "maxValue": 35,
+      "minStep": 0.5
+    }
+  ]
+}
