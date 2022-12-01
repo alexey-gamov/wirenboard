@@ -34,6 +34,56 @@
       "name": "Инверсия",
       "init": true,
       "value": false
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Open",
+        "topicSet": "/devices/(1)/controls/Open/on"
+      },
+      "name": "Открыть",
+      "input": "button",
+      "value": ""
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Close",
+        "topicSet": "/devices/(1)/controls/Close/on"
+      },
+      "name": "Закрыть",
+      "input": "button",
+      "value": ""
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Stop",
+        "topicSet": "/devices/(1)/controls/Stop/on"
+      },
+      "name": "Остановить",
+      "input": "button",
+      "value": ""
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Delete end positions",
+        "topicSet": "/devices/(1)/controls/Delete end positions/on"
+      },
+      "name": "Удалить концевые положения",
+      "input": "button",
+      "value": ""
+    },
+    {
+      "link": {
+        "type": "Integer",
+        "topicGet": "/devices/(1)/controls/Factory Default",
+        "topicSet": "/devices/(1)/controls/Factory Default/on"
+      },
+      "name": "Сбросить настройки",
+      "input": "button",
+      "value": ""
     }
   ]
 }

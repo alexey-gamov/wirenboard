@@ -48,43 +48,23 @@
   "options": [
     {
       "link": {
-        "type": "Integer",
+        "type": "Boolean",
         "topicGet": "/devices/(1)/controls/Manual mode",
         "topicSet": "/devices/(1)/controls/Manual mode/on"
       },
       "name": "Ручное управление",
       "init": true,
-      "value": 0,
-      "values": [
-        {
-          "value": 1,
-          "name": "Включено"
-        },
-        {
-          "value": 0,
-          "name": "Выключено"
-        }
-      ]
+      "value": false
     },
     {
       "link": {
-        "type": "Integer",
+        "type": "Boolean",
         "topicGet": "/devices/(1)/controls/Lock buttons",
         "topicSet": "/devices/(1)/controls/Lock buttons/on"
       },
       "name": "Блокировка кнопок",
       "init": true,
-      "value": 0,
-      "values": [
-        {
-          "value": 1,
-          "name": "Включена"
-        },
-        {
-          "value": 0,
-          "name": "Выключена"
-        }
-      ]
+      "value": false
     },
 	{
       "link": {
