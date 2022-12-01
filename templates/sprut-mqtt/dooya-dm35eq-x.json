@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Dooya",
+  "model": "DM35EQ-X",
+  "services": [
+    {
+      "type": "WindowCovering",
+      "characteristics": [
+        {
+          "type": "TargetPosition",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(dooya_dm35eq_x_[x0-9]{6})/controls/(Position)/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "topicSet": "/devices/(1)/controls/(2)/on"
+          }
+        },
+        {
+          "type": "CurrentPosition",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/(2)"
+          }
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "link": {
+        "type": "Boolean",
+        "topicGet": "/devices/(1)/controls/Direction",
+        "topicSet": "/devices/(1)/controls/Direction/on"
+      },
+      "name": "Инверсия",
+      "init": true,
+      "value": false
+    }
+  ]
+}
