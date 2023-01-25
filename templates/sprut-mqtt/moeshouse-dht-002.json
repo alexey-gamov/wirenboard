@@ -52,6 +52,7 @@
         "topicGet": "/devices/(1)/controls/Manual mode",
         "topicSet": "/devices/(1)/controls/Manual mode/on"
       },
+      "type": "Boolean",
       "name": "Ручное управление",
       "init": true,
       "value": false
@@ -62,6 +63,7 @@
         "topicGet": "/devices/(1)/controls/Lock buttons",
         "topicSet": "/devices/(1)/controls/Lock buttons/on"
       },
+      "type": "Boolean",
       "name": "Блокировка кнопок",
       "init": true,
       "value": false
@@ -72,6 +74,7 @@
         "topicGet": "/devices/(1)/controls/Weekly program setting temperature",
         "topicSet": "/devices/(1)/controls/Weekly program setting temperature/on"
       },
+      "type": "Float",
       "name": "Температура по расписанию (°C)",
       "init": true,
       "value": 5,

@@ -32,6 +32,7 @@
         "topicGet": "/devices/(1)/controls/Direction",
         "topicSet": "/devices/(1)/controls/Direction/on"
       },
+      "type": "Boolean",
       "name": "Инверсия",
       "init": true,
       "value": false
@@ -42,6 +43,7 @@
         "topicGet": "/devices/(1)/controls/Hand pulling",
         "topicSet": "/devices/(1)/controls/Hand pulling/on"
       },
+      "type": "Boolean",
       "name": "Управление рукой",
       "init": true,
       "value": false
@@ -52,6 +54,7 @@
         "topicGet": "/devices/(1)/controls/Open",
         "topicSet": "/devices/(1)/controls/Open/on"
       },
+      "type": "Boolean",
       "name": "Открыть",
       "input": "button",
       "value": ""
@@ -62,6 +65,7 @@
         "topicGet": "/devices/(1)/controls/Close",
         "topicSet": "/devices/(1)/controls/Close/on"
       },
+      "type": "Boolean",
       "name": "Закрыть",
       "input": "button",
       "value": ""
@@ -72,6 +76,7 @@
         "topicGet": "/devices/(1)/controls/Stop",
         "topicSet": "/devices/(1)/controls/Stop/on"
       },
+      "type": "Boolean",
       "name": "Остановить",
       "input": "button",
       "value": ""
@@ -82,6 +87,7 @@
         "topicGet": "/devices/(1)/controls/Factory Default",
         "topicSet": "/devices/(1)/controls/Factory Default/on"
       },
+      "type": "Boolean",
       "name": "Сбросить настройки",
       "input": "button",
       "value": ""
