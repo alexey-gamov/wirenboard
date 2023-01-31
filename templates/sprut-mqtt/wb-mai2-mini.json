@@ -1,0 +1,23 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WB-MAI2-mini",
+  "catalogId": 75,
+  "services": [
+    {
+      "name": "Токовый вход",
+      "type": "C_AmpereMeter",
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-mai2-mini_[0-9]{1,3})/controls/(Current input [1-2].*)/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "scale": 0.001
+          },
+          "minStep": 0.0001
+        }
+      ]
+    }
+  ]
+}
