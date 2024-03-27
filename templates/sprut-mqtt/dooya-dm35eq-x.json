@@ -1,25 +1,55 @@
 {
   "manufacturer": "Dooya",
   "model": "DM35EQ-X",
+  "catalogId": 4167,
   "services": [
     {
       "type": "WindowCovering",
       "characteristics": [
         {
-          "type": "TargetPosition",
+          "type": "CurrentPosition",
           "link": {
             "type": "Integer",
             "topicSearch": "/devices/(dooya_dm35eq_x_[x0-9]{6})/controls/(Position)/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)"
+          }
+        },
+        {
+          "type": "TargetPosition",
+          "link": {
+            "type": "Integer",
             "topicGet": "/devices/(1)/controls/(2)",
             "topicSet": "/devices/(1)/controls/(2)/on"
           }
         },
         {
-          "type": "CurrentPosition",
-          "link": {
-            "type": "Integer",
-            "topicGet": "/devices/(1)/controls/(2)"
-          }
+          "type": "C_TargetPositionState",
+          "link": [
+            {
+              "type": "Boolean",
+              "topicGet": "/devices/(1)/controls/Close",
+              "topicSet": "/devices/(1)/controls/Close/on",
+              "outMap": {
+                "CLOSE": "true"
+              }
+            },
+            {
+              "type": "Boolean",
+              "topicGet": "/devices/(1)/controls/Open",
+              "topicSet": "/devices/(1)/controls/Open/on",
+              "outMap": {
+                "OPEN": "true"
+              }
+            },
+            {
+              "type": "Boolean",
+              "topicGet": "/devices/(1)/controls/Stop",
+              "topicSet": "/devices/(1)/controls/Stop/on",
+              "outMap": {
+                "STOP": "true"
+              }
+            }
+          ]
         }
       ]
     }
@@ -33,41 +63,8 @@
       },
       "type": "Boolean",
       "name": "Инверсия",
-      "init": true,
+      "init": false,
       "value": false
-    },
-    {
-      "link": {
-        "type": "Integer",
-        "topicGet": "/devices/(1)/controls/Open",
-        "topicSet": "/devices/(1)/controls/Open/on"
-      },
-      "type": "Boolean",
-      "name": "Открыть",
-      "input": "button",
-      "value": ""
-    },
-    {
-      "link": {
-        "type": "Integer",
-        "topicGet": "/devices/(1)/controls/Close",
-        "topicSet": "/devices/(1)/controls/Close/on"
-      },
-      "type": "Boolean",
-      "name": "Закрыть",
-      "input": "button",
-      "value": ""
-    },
-    {
-      "link": {
-        "type": "Integer",
-        "topicGet": "/devices/(1)/controls/Stop",
-        "topicSet": "/devices/(1)/controls/Stop/on"
-      },
-      "type": "Boolean",
-      "name": "Остановить",
-      "input": "button",
-      "value": ""
     },
     {
       "link": {
@@ -77,8 +74,7 @@
       },
       "type": "Boolean",
       "name": "Удалить концевые положения",
-      "input": "button",
-      "value": ""
+      "input": "button"
     },
     {
       "link": {
@@ -88,8 +84,8 @@
       },
       "type": "Boolean",
       "name": "Сбросить настройки",
-      "input": "button",
-      "value": ""
+      "description": "Полный сброс устройства включая настройки подключения",
+      "input": "button"
     }
   ]
 }
