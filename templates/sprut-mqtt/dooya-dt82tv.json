@@ -10,7 +10,7 @@
           "type": "CurrentPosition",
           "link": {
             "type": "Integer",
-            "topicSearch": "/devices/(dooya_[x0-9]{6})/controls/(Position)/meta/type",
+            "topicSearch": "/devices/(dooya_[x0-9a-f]{6})/controls/(Position)/meta/type",
             "topicGet": "/devices/(1)/controls/(2)"
           }
         },
